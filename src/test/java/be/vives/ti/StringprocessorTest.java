@@ -18,7 +18,7 @@ class StringprocessorTest {
         assertThat(stringprocessor.getString().equals("test"));
     }
     @Test
-    void appendToEsistingSuffix(){
+    void appendToExistingSuffix(){
         stringprocessor.appendIfMissing("123test");
         stringprocessor.appendIfMissing("test");
         assertThat(stringprocessor.getString().equals("123test"));
