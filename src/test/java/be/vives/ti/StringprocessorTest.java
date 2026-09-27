@@ -23,4 +23,10 @@ class StringprocessorTest {
         stringprocessor.appendIfMissing("test");
         assertThat(stringprocessor.getString().equals("123test"));
     }
+    @Test
+    void addSuffixToStringWithoughtSuffix(){
+        stringprocessor.appendIfMissing("thisIsATest");
+        stringprocessor.appendIfMissing("Suffix");
+        assertThat(stringprocessor.getString().equals("thisIsATestSuffix"));
+    }
 }
